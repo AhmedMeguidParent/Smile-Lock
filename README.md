@@ -1,4 +1,4 @@
-# SmileLock
+# SmileLock (Rectangle Buttons)
 
 [![GitHub Issues](http://img.shields.io/github/issues/recruit-lifestyle/Smile-Lock.svg?style=flat)](https://github.com/recruit-lifestyle/Smile-Lock/issues)
 <a href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
