@@ -55,7 +55,7 @@ open class PasswordInputView: UIView {
     }
     
     @IBInspectable
-    open var highlightBackgroundColor = UIColor.red
+    open var highlightBackgroundColor = UIColor.white
     
     @IBInspectable
     open var highlightTextColor = UIColor.white
@@ -111,9 +111,9 @@ open class PasswordInputView: UIView {
         label.textColor = textColor
         
         //update circle view
-        circleView.frame = CGRect(x: 0, y: 0, width: 2 * circleRadius, height: 2 * circleRadius)
+        circleView.frame = CGRect(x: 0, y: 0, width: width, height: height)
         circleView.center = center
-        circleView.layer.cornerRadius = circleRadius
+//        circleView.layer.cornerRadius = circleRadius
         circleView.backgroundColor = circleBackgroundColor
         //circle view border
         circleView.layer.borderWidth = isVibrancyEffect ? borderWidth : 0
@@ -122,7 +122,7 @@ open class PasswordInputView: UIView {
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(Double.pi), clockwise: false)
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
-        layer.mask = maskLayer
+      //  layer.mask = maskLayer
         
         //update color
         backgroundColor = borderColor
@@ -196,10 +196,10 @@ private extension PasswordInputView {
 internal extension NSLayoutConstraint {
     class func addConstraints(fromView view: UIView, toView baseView: UIView, constraintInsets insets: UIEdgeInsets) {
         baseView.topAnchor.constraint(equalTo: view.topAnchor, constant: -insets.top)
-        let topConstraint = baseView.topAnchor.constraint(equalTo: view.topAnchor, constant: -insets.top)
-        let bottomConstraint = baseView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: insets.bottom)
-        let leftConstraint = baseView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -insets.left)
-        let rightConstraint = baseView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: insets.right)
+        let topConstraint = baseView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0)
+        let bottomConstraint = baseView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        let leftConstraint = baseView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
+        let rightConstraint = baseView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0)
         NSLayoutConstraint.activate([topConstraint, bottomConstraint, leftConstraint, rightConstraint])
     }
     

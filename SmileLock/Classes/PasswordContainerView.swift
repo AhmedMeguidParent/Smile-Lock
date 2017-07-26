@@ -22,12 +22,6 @@ open class PasswordContainerView: UIView {
     @IBOutlet weak var touchAuthenticationButton: UIButton!
     
     //MARK: Property
-    open var deleteButtonLocalizedTitle: String = "" {
-        didSet {
-            deleteButton.setTitle(NSLocalizedString(deleteButtonLocalizedTitle, comment: ""), for: .normal)
-        }
-    }
-    
     open weak var delegate: PasswordInputCompleteProtocol?
     fileprivate var touchIDContext = LAContext()
     
@@ -88,7 +82,7 @@ open class PasswordContainerView: UIView {
         }
     }
     fileprivate let kDefaultWidth: CGFloat = 288
-    fileprivate let kDefaultHeight: CGFloat = 410
+    fileprivate let kDefaultHeight: CGFloat = 300
     fileprivate var widthConstraint: NSLayoutConstraint!
     
     fileprivate func configureConstraints() {

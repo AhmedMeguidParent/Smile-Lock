@@ -33,7 +33,7 @@ open class PasswordDotView: UIView {
     }
     
     @IBInspectable
-    open var fillColor = UIColor.red {
+    open var fillColor = UIColor(red: 0, green : 205/266, blue : 1, alpha : 1) {
         didSet {
             setNeedsDisplay()
         }
